@@ -27,11 +27,12 @@ function Affairs(props: AffairsPropsType) {
         <div className={s.affairArea}>
 
             {mappedAffairs}
-
-            <button onClick={setAll}>All</button>
-            <button onClick={setHigh}>High</button>
-            <button onClick={setMiddle}>Middle</button>
-            <button onClick={setLow}>Low</button>
+            <div className={s.groupButton}>
+                <button className={s.glow_on_hover} onClick={setAll}>All</button>
+                <button className={s.glow_on_hover} onClick={setHigh}>High</button>
+                <button className={s.glow_on_hover} onClick={setMiddle}>Middle</button>
+                <button className={s.glow_on_hover} onClick={setLow}>Low</button>
+            </div>
         </div>
     )
 }

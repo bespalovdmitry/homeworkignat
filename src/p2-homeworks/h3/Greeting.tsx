@@ -2,25 +2,28 @@ import React from 'react'
 import s from './Greeting.module.css'
 
 type GreetingPropsType = {
-    name: any // need to fix any
-    setNameCallback: any // need to fix any
-    addUser: any // need to fix any
-    error: any // need to fix any
-    totalUsers: any // need to fix any
+    name: string
+    setNameCallback: (newUser: string) => void
+    addUser: () => void
+    error: string
+    totalUsers: number
 }
 
 // презентационная компонента (для верстальщика)
-const Greeting: React.FC<GreetingPropsType> = (
-    {name, setNameCallback, addUser, error, totalUsers} // деструктуризация пропсов
-) => {
-    const inputClass = s.error // need to fix with (?:)
+const Greeting: React.FC<GreetingPropsType> = ({name, setNameCallback, addUser, error, totalUsers}) => {
+    const inputClass = error === 'Error' ? s.error : ''
 
     return (
-        <div>
-            <input value={name} onChange={setNameCallback} className={inputClass}/>
-            <span>{error}</span>
-            <button onClick={addUser}>add</button>
-            <span>{totalUsers}</span>
+        <div className={s.paper}>
+            <div>
+                <input value={name} onChange={(e) => setNameCallback(e.currentTarget.value)} className={inputClass}/>
+                <button onClick={addUser} className={s.glow_on_hover} style={{marginLeft: '5px'}}>add</button>
+                <span style={{color: 'white'}}>{totalUsers}</span>
+            </div>
+
+            <div>
+                <span style={{color: 'red'}}>{error}</span>
+            </div>
         </div>
     )
 }

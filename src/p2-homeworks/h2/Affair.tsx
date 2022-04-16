@@ -13,15 +13,18 @@ function Affair(props: AffairPropsType) {
     }
 
     return (
-        <div style={{display: 'flex', marginBottom: '1em'}}>
-            <button className={s.btn} onClick={deleteCallback}>Delete</button>
-            <div style={{display: 'flex', marginLeft: '1em'}}>
-                <div className={s.affairText} style={{width: '100px'}}>{props.affair.name}</div>
-                <div className={props.affair.priority === 'high' ? `${s.highColor}` : ''}>
-                    {props.affair.priority}
-                </div>
+        <div style={{
+            display: 'grid',
+            marginBottom: '1em',
+            justifyContent: 'space-evenly',
+            gridTemplateRows: '1fr',
+            gridTemplateColumns: '30% 40% 30%'
+        }}>
+            <button className={s.glow_on_hover} onClick={deleteCallback}>Delete</button>
+            <div className={s.affairText} style={{width: '100px'}}>{props.affair.name}</div>
+            <div>
+                {props.affair.priority}
             </div>
-
         </div>
     )
 }
