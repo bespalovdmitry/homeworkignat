@@ -1,33 +1,36 @@
 .affairArea {
     margin-left: 10px;
-    width: 300px;
+    width: fit-content;
     height: 80vh;
     max-height: 500px;
     overflow: hidden;
-    box-shadow: 0 5px 30px rgb(0 0 0 / 20%);
-    background: #242526;
+    box-shadow: rgba(149, 157, 165, 0.2) 0 8px 24px;
     border-radius: 20px;
     padding: 10px;
 }
 
 .affairText {
-    text-align: center;
-    color: #fff;
+    width: auto !important;
     font-size: 20px;
     font-weight: bold;
-    margin-bottom: 10px;
 }
 
 .highColor {
-    color: red;
+    font-size: 20px;
+    font-weight: bold;
+    color: darkred;
 }
 
 .middleColor {
-    color: aqua;
+    font-size: 20px;
+    font-weight: bold;
+    color: #11998e;
 }
 
 .lowColor {
-    color: yellow;
+    font-size: 20px;
+    font-weight: bold;
+    color: #1976d1;
 }
 
 .glow_on_hover {

@@ -1,6 +1,5 @@
 import React, {useState} from 'react'
 import Affairs from './Affairs'
-import s from './Affairs.module.css'
 
 // types
 export type AffairPriorityType = 'low' | 'middle' | 'high'
@@ -10,10 +9,10 @@ export type FilterType = 'all' | AffairPriorityType
 // constants
 const defaultAffairs: any = [
     {_id: 1, name: 'React', priority: 'high'},
-    {_id: 2, name: 'anime', priority: 'low'},
-    {_id: 3, name: 'games', priority: 'low'},
-    {_id: 4, name: 'work', priority: 'high'},
-    {_id: 5, name: 'html & css', priority: 'middle'},
+    {_id: 2, name: 'Anime', priority: 'low'},
+    {_id: 3, name: 'Games', priority: 'low'},
+    {_id: 4, name: 'Work', priority: 'high'},
+    {_id: 5, name: 'Html & CSS', priority: 'middle'},
 ]
 
 // pure helper functions
