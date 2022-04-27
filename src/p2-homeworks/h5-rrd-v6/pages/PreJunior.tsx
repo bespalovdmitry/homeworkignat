@@ -4,7 +4,7 @@ import HW2 from '../../h2/HW2'
 import HW3 from '../../h3/HW3'
 import HW4 from '../../h4/HW4'
 
-function PreJunior() {
+export function PreJunior() {
     return (
         <div>
             <HW1/>
@@ -12,12 +12,22 @@ function PreJunior() {
             <HW3/>
             <HW4/>
             {/*<HW6/>*/}
-
         </div>
     )
 }
 
-export default PreJunior
+export function Junior() {
+    return (
+        <div style={{textAlign: 'center'}}>
+            <h1>Junior</h1>
+        </div>
+    )
+}
 
-// сделайте по аналогии пустые страницы джун и джун+
-// туда будут добавляться следующие дз
+export function JuniorPlus() {
+    return (
+        <div style={{textAlign: 'center'}}>
+            <h1>JuniorPlus</h1>
+        </div>
+    )
+}

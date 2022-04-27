@@ -1,0 +1,33 @@
+.header {
+    margin-bottom: 20px;
+    width: 100%;
+    height: 50px;
+    background-color: #1976d1;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.header > nav {
+    text-align: center;
+}
+
+.header > nav > div {
+    float: left;
+    height: 100%;
+    position: relative;
+}
+
+header > nav > div:hover > a {
+    background-color: rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.menuItems {
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    line-height: 50px;
+    padding: 0 15px;
+    color: #fbfbfb;
+    transition: background-color 0.2s ease;
+    text-transform: uppercase;
+}
