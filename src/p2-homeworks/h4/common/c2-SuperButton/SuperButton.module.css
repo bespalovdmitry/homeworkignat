@@ -14,13 +14,26 @@
     margin: 5px;
 }
 
+.defaultBtn:hover {
+    transition: all 0.5s ease-in-out;
+    background-color: #07417a;
+}
+
 .red {
     background: red;
+}
+
+.red:hover {
+    transition: all 0.5s ease-out;
+    background: #8c0505;
 }
 
 .disabled {
     cursor: default;
     color: rgba(0, 0, 0, 0.26);
     box-shadow: none;
+    background-color: rgba(0, 0, 0, 0.12);
+}
+.disabled:hover {
     background-color: rgba(0, 0, 0, 0.12);
 }
