@@ -1,0 +1,79 @@
+label {
+    cursor: pointer;
+    margin-right: 8px;
+}
+
+/* *********************************
+Реальная радиокнопка
+********************************* */
+
+.realRadioBtn {
+    /* Скрываем реальную радио кнопку*/
+    width: 0;
+    height: 0;
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+}
+
+/* *********************************
+Фейковая радиокнопка
+********************************* */
+
+.customRadioBtn {
+    position: relative;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: #ffffff;
+    border: 2px solid #1976d1;
+    border-radius: 50%;
+    vertical-align: text-top;
+    margin-right: 5px;
+    margin-bottom: 3px;
+}
+
+.customRadioBtn::before {
+    content: "";
+
+    /* Рисуем внешний круг */
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background: #1976d1;
+    border-radius: 50%;
+
+    /* Выравниваем по центру */
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(0);
+
+    transition: 0.2s ease-in;
+}
+
+/* *********************************
+Магия переключения фейковой кнопки
+********************************* */
+.realRadioBtn:checked + .customRadioBtn::before {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+/* Подсветка для радиокнопке в фокусе */
+.realRadioBtn:focus + .customRadioBtn {
+    box-shadow: rgb(0 0 0 / 20%) 0 3px 1px -2px, rgb(0 0 0 / 14%) 0 2px 2px 0, rgb(0 0 0 / 12%) 0 1px 5px 0;
+}
+
+.label {
+    cursor: pointer;
+}
+
+.paper {
+    margin-left: 10px;
+    width: max-content;
+    height: max-content;
+    overflow: hidden;
+    box-shadow: rgba(149, 157, 165, 0.2) 0 8px 24px;
+    border-radius: 10px;
+    padding: 15px;
+}

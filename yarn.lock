@@ -7038,7 +7038,14 @@ postcss@^8.3.5, postcss@^8.4.12, postcss@^8.4.4, postcss@^8.4.7:
     picocolors "^1.0.0"
     source-map-js "^1.0.2"
 
-prelude-ls@^1.2.1:
+prelude-extension@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/prelude-extension/-/prelude-extension-0.1.0.tgz#e5330b6a513d3fc9f81fb04b826f01207ca9028c"
+  integrity sha512-nPXNWB4rEDmXVLXywaS3YT23MTsshFEv4UjftnTt90uo9C9sBVZmyEn9elzhJ04k+lDvrHV192YkjwrVORaOew==
+  dependencies:
+    prelude-ls "^1.1.2"
+
+prelude-ls@^1.1.1, prelude-ls@^1.1.2, prelude-ls@^1.2.1:
   version "1.2.1"
   resolved "https://registry.yarnpkg.com/prelude-ls/-/prelude-ls-1.2.1.tgz#debc6489d7a6e6b0e7611888cec880337d316396"
   integrity sha512-vkcDPrRZo1QZLbn5RLGPpg/WmIQ65qoWWhcGKf/b5eplkkarX0m9z8ppCat4mlOqUsWpyNuYgO3VRyrYHSzX5g==
@@ -7322,6 +7329,15 @@ react-scripts@5.0.0:
     workbox-webpack-plugin "^6.4.1"
   optionalDependencies:
     fsevents "^2.3.2"
+
+react-selectize@^3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/react-selectize/-/react-selectize-3.0.1.tgz#92efefd26ac68ba9caca971bc1cffd5851217f89"
+  integrity sha512-dT53g7iCbSY7BSSXbgnGsufhfboA/5sL1a1LkvbYTup3lN0rvXWnUP9mQX6Scey46kLEa5oIV35Fn+YKxG8tqA==
+  dependencies:
+    prelude-extension "^0.1.0"
+    prelude-ls "^1.1.1"
+    tether "^1.1.1"
 
 react@^18.0.0:
   version "18.1.0"
@@ -8228,6 +8244,11 @@ test-exclude@^6.0.0:
     "@istanbuljs/schema" "^0.1.2"
     glob "^7.1.4"
     minimatch "^3.0.4"
+
+tether@^1.1.1:
+  version "1.4.7"
+  resolved "https://registry.yarnpkg.com/tether/-/tether-1.4.7.tgz#d56a818590d8fe72e387f77a67f93ab96d8e1fb2"
+  integrity sha512-Z0J1aExjoFU8pybVkQAo/vD2wfSO63r+XOPfWQMC5qtf1bI7IWqNk4MiyBcgvvnY8kqnY06dVdvwTK2S3PU/Fw==
 
 text-table@^0.2.0:
   version "0.2.0"
