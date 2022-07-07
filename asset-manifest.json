@@ -1,14 +1,15 @@
 {
   "files": {
     "main.css": "/homeworkignat/static/css/main.ff433deb.css",
-    "main.js": "/homeworkignat/static/js/main.80989be4.js",
+    "main.js": "/homeworkignat/static/js/main.d43f3ef3.js",
+    "static/media/DualRing.gif": "/homeworkignat/static/media/DualRing.597394f9835bf280102f.gif",
     "static/media/edit.png": "/homeworkignat/static/media/edit.0f46e2728eb984e21ce8.png",
     "index.html": "/homeworkignat/index.html",
     "main.ff433deb.css.map": "/homeworkignat/static/css/main.ff433deb.css.map",
-    "main.80989be4.js.map": "/homeworkignat/static/js/main.80989be4.js.map"
+    "main.d43f3ef3.js.map": "/homeworkignat/static/js/main.d43f3ef3.js.map"
   },
   "entrypoints": [
     "static/css/main.ff433deb.css",
-    "static/js/main.80989be4.js"
+    "static/js/main.d43f3ef3.js"
   ]
 }
