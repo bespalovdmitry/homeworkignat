@@ -22,21 +22,27 @@ const SuperRadio: React.FC<SuperRadioPropsType> = (
         onChangeOption && onChangeOption(e.currentTarget.value)
     }
 
-    const mappedOptions: any[] = options ? options.map((o, i) => (
-            <label key={name + '-' + i} className={s.label}>
-                <input
-                    className={s.realRadioBtn}
-                    onChange={onChangeCallback}
-                    type={'radio'}
-                    name={name}
-                    value={o}
-                    checked={o === value}
-                    // name, checked, value, onChange
-                />
-                <span className={s.customRadioBtn}></span>
-                {o}
-            </label>
-    )) : []
+    console.log(`VALUE - ${value}`)
+    console.log(`OPT - ${options}`)
+
+    const mappedOptions: any[] = options ? options.map((o, i) => {
+        console.log(o === value)
+        return    <label htmlFor={o}  key={name + '-' + i} className={s.label}>
+            <input
+                id={o}
+                type={'radio'}
+                name={name}
+                value={o}
+                checked={o === value}
+                className={s.realRadioBtn}
+                onChange={onChangeCallback}
+                {...restProps}
+                // name, checked, value, onChange
+            />
+            <span className={s.customRadioBtn}></span>
+            {o}
+        </label>
+    }) : []
 
     return (
         <>

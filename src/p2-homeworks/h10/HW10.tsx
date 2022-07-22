@@ -4,6 +4,7 @@ import Loader from './Loader';
 import {useDispatch, useSelector} from 'react-redux';
 import {loadingAC} from './bll/loadingReducer';
 import {AppStoreType} from './bll/store';
+import paperStyle from '../../common/styles/Paper.module.css';
 
 function HW10() {
     const loading = useSelector<AppStoreType, boolean>((state) => state.loading.isLoading)
@@ -16,14 +17,17 @@ function HW10() {
         // console.log('loading...')
     };
     return (
-        <div>
+        <div >
             <hr/>
             homeworks 10
-            {loading ? <Loader /> :
+            <div className={paperStyle.paper}>
+                {loading ? <Loader /> :
                     <div>
                         <SuperButton def onClick={setLoading}>set loading...</SuperButton>
                     </div>
-            }
+                }
+            </div>
+
 
             <hr/>
             {/*для личного творчества, могу проверить*/}

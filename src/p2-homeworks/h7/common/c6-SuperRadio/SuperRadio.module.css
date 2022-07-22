@@ -55,7 +55,7 @@ label {
 /* *********************************
 Магия переключения фейковой кнопки
 ********************************* */
-.realRadioBtn:checked + .customRadioBtn::before {
+.realRadioBtn[type='radio']:checked + .customRadioBtn::before {
     transform: translate(-50%, -50%) scale(1);
 }
 
